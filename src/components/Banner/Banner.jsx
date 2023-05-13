@@ -1,11 +1,12 @@
 function Banner() {
   return (
-    <div className="container mx-auto px-5 flex py-10">
+    <div className="container mx-auto px-16 flex py-10 my-16">
       <div className="flex-auto">
-        <h1 className="text-6xl font-bold">
-          One Step <br /> Closer To Your <br />
-          <span className="text-indigo-600">Dream Job</span>
-        </h1>
+        <span className="">
+          <h1 className="text-6xl font-bold">One Step</h1>
+           <h1 className="text-6xl font-bold my-2">Closer To Your</h1>
+          <h1 className="text-indigo-600 text-6xl font-bold">Dream Job</h1>
+        </span>
         <p className="text-slate-600 pt-8">
           Explore thousands of job opportunities with all the information <br />{" "}
           you need. Its your future. Come find it. Manage all your job <br />{" "}

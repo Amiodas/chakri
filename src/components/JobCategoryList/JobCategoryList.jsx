@@ -1,6 +1,6 @@
 function JobCategoryList() {
   return (
-    <div className="container mx-auto px-5 my-10">
+    <div className="container mx-auto px-16 my-10">
       <div className="text-center">
         <h1 className="text-5xl mb-5">Job Category List</h1>
         <p className="text-slate-600">
@@ -8,7 +8,7 @@ function JobCategoryList() {
           need. Its your future
         </p>
       </div>
-      <div className="flex py-10 my-10">
+      <div className="flex py-10 mt-10 mb-16">
         <div className="flex-auto">
           <div>
             <img
