@@ -1,17 +1,15 @@
 import "./App.css";
-import Banner from "./components/Banner/Banner";
-import FeatureJobs from "./components/FeatureJobs/FeatureJobs";
+import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
-import JobCategoryList from "./components/JobCategoryList/JobCategoryList";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
     <>
       <div className="mx-auto">
         <Header></Header>
-        <Banner></Banner>
-        <JobCategoryList></JobCategoryList>
-        <FeatureJobs></FeatureJobs>
+        <Outlet />
+        <Footer></Footer>
       </div>
     </>
   );
