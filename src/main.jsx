@@ -2,11 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
-import Home from "./Pages/Home/Home.jsx";
-import AppliedJobs from "./Pages/AppliedJobs/AppliedJobs.jsx";
-import Statistics from "./Pages/Statistics/Statistics.jsx";
-import Blog from "./Pages/Blog/Blog.jsx";
+import Home from "./components/Home/Home.jsx";
+import AppliedJobs from "./components/AppliedJobs/AppliedJobs.jsx";
+import Statistics from "./components/Statistics/Statistics.jsx";
+import Blog from "./components/Blog/Blog.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import JobDetails from "./components/JobDetails/JobDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,11 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/job-details/:jobId",
+        element: <JobDetails />,
+        // loader: () => fetch("data.json"),
       },
       {
         path: "/applied-jobs",

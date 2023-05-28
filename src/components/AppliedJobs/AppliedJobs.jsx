@@ -1,12 +1,12 @@
 function AppliedJobs() {
   return (
     <div className="container mx-auto px-16 pt-4 pb-10">
-      <div className="bg-slate-200 py-16 rounded-lg">
-        <h1 className="text-2xl font-semibold text-center py-16">
+      <div className="bg-slate-100 py-16 rounded-lg">
+        <h1 className="text-2xl font-semibold text-slate-800 text-center py-16">
           Applied jobs
         </h1>
       </div>
-      <div className="my-16">
+      <div className="my-10">
         <div className="text-right mb-5">
           <button className="px-6 py-2 bg-slate-100 border-2 rounded text-xs font-semibold text-slate-400">
             Filter By
@@ -17,10 +17,10 @@ function AppliedJobs() {
             <img src="/src/assets/assets/Logo/google-1-1 1-1.png" />
           </div>
           <div className="flex-auto">
-            <h1 className="text-lg font-semibold mt-5 mb-1">
+            <h1 className="text-lg font-semibold text-slate-800 mt-5 mb-1">
               Technical Database Engineer
             </h1>
-            <p className="text-sm text-slate-400">Google LLC</p>
+            <p className="text-sm text-gray-400">Google LLC</p>
             <div className="mt-4">
               <span className="border-2 py-1 px-3 text-xs font-bold rounded text-indigo-600 border-indigo-600 mr-2">
                 Remote
@@ -35,14 +35,14 @@ function AppliedJobs() {
                   className="w-25 h-25 mr-1"
                   src="/src/assets/assets/Icons/Frame-4.png"
                 />
-                Dhaka, Bangladesh.
+                <span>Dhaka, Bangladesh.</span>
               </span>
               <span className="flex items-center ml-2">
                 <img
                   className="w-25 h-25 mr-1"
                   src="/src/assets/assets/Icons/Frame.png"
                 />
-                Salary: 100k - 150k
+                <span>Salary: 100k - 150k</span>
               </span>
             </div>
           </div>

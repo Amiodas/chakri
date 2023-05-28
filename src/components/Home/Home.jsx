@@ -1,9 +1,11 @@
 import Banner from "../../components/Banner/Banner";
 import JobCategoryList from "../../components/JobCategoryList/JobCategoryList";
 import FeatureJobs from "../../components/FeatureJobs/FeatureJobs";
+
 function Home() {
   return (
     <div>
+      {/* <div>{data}</div> */}
       <Banner></Banner>
       <JobCategoryList></JobCategoryList>
       <FeatureJobs></FeatureJobs>

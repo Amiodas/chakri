@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import ActiveLink from "../ActiveLink/ActiveLink";
 function Header() {
   return (
     <div className="">
@@ -8,18 +9,19 @@ function Header() {
         </h1>
         <ul className="flex gap-5">
           <li>
-            <Link to="/statistics">Statistics</Link>
+            <ActiveLink to="/">Home</ActiveLink>
           </li>
           <li>
-            <Link to="/applied-jobs">Applied Jobs</Link>
+            <ActiveLink to="/statistics">Statistics</ActiveLink>
           </li>
           <li>
-            <Link to="/blog">Blog</Link>
+            <ActiveLink to="/applied-jobs">Applied Jobs</ActiveLink>
+          </li>
+          <li>
+            <ActiveLink to="/blog">Blog</ActiveLink>
           </li>
         </ul>
-        <button className="bg-indigo-600 p-3 text-white hover:rounded">
-          Start Applying
-        </button>
+        <button className="bg-indigo-600 p-3 text-white">Start Applying</button>
       </div>
     </div>
   );
