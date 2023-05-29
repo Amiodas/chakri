@@ -1,4 +1,19 @@
+// import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { Link, useLoaderData } from "react-router-dom";
+import { addToAppliedJobs } from "../../utilities/fakedb";
+
 function JobDetails() {
+  const data = useLoaderData();
+  const [selectedJob, setSelectedJob] = useState([]);
+
+  useEffect(() => {
+    setSelectedJob(data);
+  }, []);
+
+  const handleAddToAppliedJobs = (id) => {
+    addToAppliedJobs(id);
+  };
   return (
     <div className="container mx-auto px-16 pt-4 pb-10">
       <div className="bg-slate-100 py-16 rounded-lg">
@@ -10,35 +25,28 @@ function JobDetails() {
         <div className="flex-6">
           <div className="mb-6">
             <span className="font-bold text-slate-800">Job Description:</span>
-            <p className="text-sm mt-3">
-              A UI/UX (User Interface/User Experience) designer is responsible
-              for designing and creating engaging and effective interfaces for
-              software and web applications. This includes designing the layout,
-              visual design, and interactivity of the user interface.
-            </p>
+            <p className="text-sm mt-3">{selectedJob.jobDescription}</p>
           </div>
           <div className="mb-6">
             <span className="font-bold text-slate-800">
               Job Responsibilities:
             </span>
-            <p className="text-sm mt-3">
-              A UI/UX (User Interface/User Experience) designer is responsible
-              for designing and creating engaging and effective interfaces for
-              software and web applications. This includes designing the layout,
-              visual design, and interactivity of the user interface.
-            </p>
+            <p className="text-sm mt-3">{selectedJob.jobResponsibility}</p>
           </div>
           <div className="mb-6">
             <h3 className="font-bold text-slate-800">
               Educational Requirements:
             </h3>
-            <p className="text-sm mt-3">
-              Bachelor degree to complete any reputational university.
-            </p>
+
+            {selectedJob?.educationalRequirements?.map((eduRequ, index) => (
+              <p key={index} className="text-sm mt-3">
+                {eduRequ}
+              </p>
+            ))}
           </div>
           <div className="mb-6">
             <h3 className="font-bold text-slate-800">Experiences:</h3>
-            <p className="text-sm mt-3">2-3 Years in this field.</p>
+            <p className="text-sm mt-3">{selectedJob.experiences}</p>
           </div>
         </div>
         <div className="flex-6">
@@ -52,7 +60,7 @@ function JobDetails() {
                 Salary:
               </span>
               <span className="text-gray-400 text-sm ps-2">
-                100k - 150k (per month)
+                {selectedJob.salary} (per month)
               </span>
             </div>
             <div className="flex items-center mt-3">
@@ -60,7 +68,9 @@ function JobDetails() {
               <span className="text-gray-600 text-sm font-semibold ps-2">
                 Job Title:
               </span>
-              <span className="text-gray-400 text-sm ps-2">Job title</span>
+              <span className="text-gray-400 text-sm ps-2">
+                {selectedJob.position}
+              </span>
             </div>
             <div className="mt-5">
               <h3 className="font-bold text-slate-800 border-b-2 pb-2">
@@ -75,7 +85,7 @@ function JobDetails() {
                   Phone:
                 </span>
                 <span className="text-gray-400 text-sm ps-2">
-                  01750-00 00 00
+                  {selectedJob.phone}
                 </span>
               </div>
               <div className="flex items-center mt-3">
@@ -87,7 +97,7 @@ function JobDetails() {
                   Email:
                 </span>
                 <span className="text-gray-400 text-sm ps-2">
-                  info@gmail.com
+                  {selectedJob.email}
                 </span>
               </div>
               <div className="flex items-center mt-3">
@@ -96,18 +106,23 @@ function JobDetails() {
                   src="/src/assets/assets/Icons/Frame-4.png"
                 />
                 <span className="text-gray-600 text-sm font-semibold ps-2">
-                  Address:{" "}
+                  Address:
                   <span className="text-gray-400 text-sm ps-2">
-                    Dhanmondi 32, Sukrabad Dhaka, Bangladesh
+                    {selectedJob.location}
                   </span>
                 </span>
               </div>
             </div>
           </div>
           <div className="flex items-center justify-center">
-            <button className="block bg-indigo-600 py-3 mt-8 px-4 text-white font-semibold rounded w-80">
+            <Link to="/applied-jobs">
+            <button
+              onClick={() => handleAddToAppliedJobs(selectedJob.id)}
+              className="block bg-indigo-600 py-3 mt-8 px-4 text-white font-semibold rounded w-80"
+            >
               Apply Now
             </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@ function Banner() {
       <div className="flex-auto">
         <span className="">
           <h1 className="text-6xl font-bold">One Step</h1>
-           <h1 className="text-6xl font-bold my-2">Closer To Your</h1>
+          <h1 className="text-6xl font-bold my-2">Closer To Your</h1>
           <h1 className="text-indigo-600 text-6xl font-bold">Dream Job</h1>
         </span>
         <p className="text-slate-600 pt-8">
