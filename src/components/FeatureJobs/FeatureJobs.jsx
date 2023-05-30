@@ -4,11 +4,26 @@ import "./FeatureJobs.css";
 
 function FeatureJobs() {
   const [jobs, setJobs] = useState([]);
+  const [displayJobs, setDisplayJobs] = useState([]);
+  const [loading, setLoading] = useState(false);
+
   useEffect(() => {
     fetch("data.json")
       .then((response) => response.json())
       .then((data) => setJobs(data));
   }, []);
+
+  useEffect(() => {
+    const data = jobs.slice(0, 4);
+    setDisplayJobs(data);
+  }, [jobs]);
+
+  const handleShowAllData = () => {
+    setLoading(true);
+    const data = jobs.slice(0, jobs.length);
+    setDisplayJobs(data);
+    setLoading(false);
+  };
   return (
     <div className="container mx-auto px-16 my-16">
       <div className="text-center">
@@ -21,15 +36,18 @@ function FeatureJobs() {
 
       <div className="flex gap-5 my-16">
         <div className="feature-item">
-          {jobs.map((job) => (
+          {displayJobs.map((job) => (
             <FeatureJobItems key={job.id} job={job}></FeatureJobItems>
           ))}
         </div>
       </div>
 
       <div className="text-center">
-        <button className="bg-indigo-600 text-white font-semibold px-8 py-3">
-          See All Jobs
+        <button
+          onClick={handleShowAllData}
+          className="bg-indigo-600 text-white font-semibold px-8 py-3"
+        >
+          {loading  ? "Loading..." : "See All Jobs"}
         </button>
       </div>
     </div>

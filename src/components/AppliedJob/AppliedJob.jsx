@@ -1,11 +1,13 @@
 import React from "react";
+import { jobDetailsData } from "../../utilities/fakedb";
+import { Link } from "react-router-dom";
 
 const AppliedJob = ({ job }) => {
   const { id, image, position, companyName, location, salary, jobTypes } = job;
 
   const handleViewDetails = (id) => {
-    console.log(id)
-  }
+    jobDetailsData(id);
+  };
   return (
     <div>
       <div className="flex gap-10 border-2 rounded p-8 mb-6">
@@ -45,9 +47,14 @@ const AppliedJob = ({ job }) => {
           </div>
         </div>
         <div className="flex items-center">
-          <button onClick={() => handleViewDetails(id)} className="bg-indigo-600 text-white px-4 py-2">
-            View Details
-          </button>
+          <Link to={`/job-details/${id}`}>
+            <button
+              onClick={() => handleViewDetails(id)}
+              className="bg-indigo-600 text-white px-4 py-2"
+            >
+              View Details
+            </button>
+          </Link>
         </div>
       </div>
     </div>
