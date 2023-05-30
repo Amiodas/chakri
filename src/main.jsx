@@ -9,6 +9,7 @@ import Blog from "./components/Blog/Blog.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import JobDetails from "./components/JobDetails/JobDetails.jsx";
 import jobDetailsLoader from "./loaders/jobDetailsLoader.js";
+import appliedJobsLoader from "./loaders/appliedJobsLoader.js";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,7 @@ const router = createBrowserRouter([
       {
         path: "/applied-jobs",
         element: <AppliedJobs />,
+        loader: appliedJobsLoader
       },
       {
         path: "/Blog",

@@ -1,6 +1,6 @@
 const jobDetailsLoader = async () => {
-  const loadedJobs = await fetch("/data.json");
-  const jobs = await loadedJobs.json();
+  const loadJobs = await fetch("/data.json");
+  const jobs = await loadJobs.json();
 
   const selectedJobDetails = localStorage.getItem("job-details");
 
