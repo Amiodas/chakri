@@ -1,0 +1,22 @@
+.apply-btn {
+  background-color: #4f46e5;
+  font-weight: bold;
+  color: white;
+  margin-top: 20px;
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 300px;
+}
+
+.disabled-apply-btn {
+  background-color: gray;
+  font-weight: bold;
+  color: white;
+  margin-top: 20px;
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 300px;
+  cursor: not-allowed;
+}

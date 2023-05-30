@@ -10,6 +10,7 @@ const appliedJobsLoader = async () => {
   for (const id in selectedJobs) {
     const selectedAppliedJob = jobs.find((job) => job.id === parseInt(id));
     if(selectedAppliedJob) {
+      selectedAppliedJob.isApplied = true;
       appliedJobs.push(selectedAppliedJob)
     }
   }

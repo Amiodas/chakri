@@ -14,7 +14,8 @@
     "email": "info@gmail.com",
     "jobTypes": ["Remote", "Full Time"],
     "location": "Dhaka, Bangladesh.",
-    "salary": "100k - 150k"
+    "salary": "100k - 150k",
+    "isApplied": false
   },
   {
     "id": 2,
@@ -31,7 +32,8 @@
     "email": "info@gmail.com",
     "jobTypes": ["Remote", "Full Time"],
     "location": "Dhaka, Bangladesh.",
-    "salary": "100k - 150k"
+    "salary": "100k - 150k",
+    "isApplied": false
   },
   {
     "id": 3,
@@ -48,7 +50,8 @@
     "email": "info@gmail.com",
     "jobTypes": ["Remote", "Full Time"],
     "location": "Dhaka, Bangladesh.",
-    "salary": "100k - 150k"
+    "salary": "100k - 150k",
+    "isApplied": false
   },
   {
     "id": 4,
@@ -65,7 +68,8 @@
     "email": "info@gmail.com",
     "jobTypes": ["Remote", "Full Time"],
     "location": "Dhaka, Bangladesh.",
-    "salary": "100k - 150k"
+    "salary": "100k - 150k",
+    "isApplied": false
   },
   {
     "id": 5,
@@ -82,7 +86,8 @@
     "email": "info@gmail.com",
     "jobTypes": ["Remote", "Full Time"],
     "location": "Dhaka, Bangladesh.",
-    "salary": "100k - 150k"
+    "salary": "100k - 150k",
+    "isApplied": false
   },
   {
     "id": 6,
@@ -99,7 +104,8 @@
     "email": "info@gmail.com",
     "jobTypes": ["Remote", "Full Time"],
     "location": "Dhaka, Bangladesh.",
-    "salary": "100k - 150k"
+    "salary": "100k - 150k",
+    "isApplied": false
   },
   {
     "id": 7,
@@ -116,7 +122,8 @@
     "email": "info@gmail.com",
     "jobTypes": ["Remote", "Full Time"],
     "location": "Dhaka, Bangladesh.",
-    "salary": "100k - 150k"
+    "salary": "100k - 150k",
+    "isApplied": false
   },
   {
     "id": 8,
@@ -133,6 +140,7 @@
     "email": "info@gmail.com",
     "jobTypes": ["Remote", "Full Time"],
     "location": "Dhaka, Bangladesh.",
-    "salary": "100k - 150k"
+    "salary": "100k - 150k",
+    "isApplied": false
   }
 ]

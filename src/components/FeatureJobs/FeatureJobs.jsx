@@ -20,8 +20,7 @@ function FeatureJobs() {
 
   const handleShowAllData = () => {
     setLoading(true);
-    const data = jobs.slice(0, jobs.length);
-    setDisplayJobs(data);
+    setDisplayJobs(jobs);
     setLoading(false);
   };
   return (
@@ -47,7 +46,7 @@ function FeatureJobs() {
           onClick={handleShowAllData}
           className="bg-indigo-600 text-white font-semibold px-8 py-3"
         >
-          {loading  ? "Loading..." : "See All Jobs"}
+          {loading ? "Loading..." : "See All Jobs"}
         </button>
       </div>
     </div>

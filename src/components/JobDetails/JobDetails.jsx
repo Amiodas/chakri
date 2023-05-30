@@ -1,17 +1,43 @@
 // import { useEffect } from "react";
 import { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
-import { addToAppliedJobs } from "../../utilities/fakedb";
+import { addToAppliedJobs, getAddedJobsFromDb } from "../../utilities/fakedb";
+import "./jobDetails.css"
 
 function JobDetails() {
-  const data = useLoaderData();
   const [selectedJob, setSelectedJob] = useState([]);
+  const [jobs, setJobs] = useState([]);
+  const [disable, setDisable] = useState(false);
+  const data = useLoaderData();
+
+  useEffect(() => {
+    fetch("/data.json")
+      .then((res) => res.json())
+      .then((data) => setJobs(data));
+  }, []);
 
   useEffect(() => {
     setSelectedJob(data);
   }, []);
 
+  useEffect(() => {
+    const appliedJobs = getAddedJobsFromDb();
+    for (const id in appliedJobs) {
+      jobs.forEach((job) => {
+        if (job.id === parseInt(id)) {
+          if (
+            job.id === selectedJob.id &&
+            job.isApplied === selectedJob.isApplied
+          ) {
+            setDisable(true);
+          }
+        }
+      });
+    }
+  }, [selectedJob, jobs]);
+
   const handleAddToAppliedJobs = (id) => {
+    console.log("clicked");
     addToAppliedJobs(id);
   };
   return (
@@ -116,12 +142,15 @@ function JobDetails() {
           </div>
           <div className="flex items-center justify-center">
             <Link to="/applied-jobs">
-            <button
-              onClick={() => handleAddToAppliedJobs(selectedJob.id)}
-              className="block bg-indigo-600 py-3 mt-8 px-4 text-white font-semibold rounded w-80"
-            >
-              Apply Now
-            </button>
+              <button
+                disabled={disable}
+                className={disable ? "disabled-apply-btn" : "apply-btn"}
+                title={disable ? "Already applied" : ""}
+                onClick={() => handleAddToAppliedJobs(selectedJob.id)}
+                // className="block bg-indigo-600 py-3 mt-8 px-4 text-white font-semibold rounded w-80"
+              >
+                Apply Now
+              </button>
             </Link>
           </div>
         </div>
