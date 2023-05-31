@@ -358,7 +358,7 @@ function Statistics() {
           dataKey="size"
           aspectRatio={4 / 3}
           stroke="#fff"
-          fill="#64510a"
+          fill="#4f46e5"
         />
       </div>
     </div>
