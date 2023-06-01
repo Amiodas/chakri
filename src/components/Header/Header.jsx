@@ -34,7 +34,7 @@ function Header() {
         <Link to="/">
           <button
             onClick={() => scrollToElement("featureJobs")}
-            className="bg-indigo-600 p-3 text-white"
+            className="bg-indigo-600 hover:bg-indigo-700 p-3 text-white"
           >
             Start Applying
           </button>

@@ -27,14 +27,14 @@ function FeatureJobItems({ job }) {
           <span className="flex items-center">
             <img
               className="w-25 h-25 mr-1"
-              src="/src/assets/assets/Icons/Frame-4.png"
+              src="/assets/Icons/Frame-4.png"
             />
             {location}
           </span>
           <span className="flex items-center ml-2">
             <img
               className="w-25 h-25 mr-1"
-              src="/src/assets/assets/Icons/Frame.png"
+              src="/assets/Icons/Frame.png"
             />
             Salary: {salary}
           </span>
@@ -43,7 +43,7 @@ function FeatureJobItems({ job }) {
           <Link to={`/job-details/${id}`}>
             <button
               onClick={() => handleJobDetails(id)}
-              className="bg-indigo-600 text-white px-4 py-2"
+              className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2"
             >
               View Details
             </button>

@@ -45,7 +45,7 @@ function JobDetails() {
       <div className="bg-slate-100 py-16">
         <img
           className="absolute top-0 right-0 z-0 w-0 md:w-96"
-          src="/src/assets/assets/All Images/Vector-1.png"
+          src="/assets/All Images/Vector-1.png"
           alt=""
         />
         <h1 className="text-2xl font-semibold text-center py-16 text-slate-800">
@@ -53,7 +53,7 @@ function JobDetails() {
         </h1>
         <img
           className="absolute left-0 bottom-72 w-0 md:w-96"
-          src="/src/assets/assets/All Images/Vector.png"
+          src="/assets/All Images/Vector.png"
           alt=""
         />
       </div>
@@ -92,7 +92,7 @@ function JobDetails() {
               Job Details
             </h3>
             <div className="flex items-center mt-3">
-              <img className="w-6" src="/src/assets/assets/Icons/Frame.png" />
+              <img className="w-6" src="/assets/Icons/Frame.png" />
               <span className="text-gray-600 text-sm font-semibold ps-2">
                 Salary:
               </span>
@@ -101,7 +101,7 @@ function JobDetails() {
               </span>
             </div>
             <div className="flex items-center mt-3">
-              <img className="w-6" src="/src/assets/assets/Icons/Frame-1.png" />
+              <img className="w-6" src="/assets/Icons/Frame-1.png" />
               <span className="text-gray-600 text-sm font-semibold ps-2">
                 Job Title:
               </span>
@@ -116,7 +116,7 @@ function JobDetails() {
               <div className="flex items-center mt-3">
                 <img
                   className="w-5"
-                  src="/src/assets/assets/Icons/Frame-2.png"
+                  src="/assets/Icons/Frame-2.png"
                 />
                 <span className="text-gray-600 text-sm font-semibold ps-2">
                   Phone:
@@ -128,7 +128,7 @@ function JobDetails() {
               <div className="flex items-center mt-3">
                 <img
                   className="w-5"
-                  src="/src/assets/assets/Icons/Frame-3.png"
+                  src="/assets/Icons/Frame-3.png"
                 />
                 <span className="text-gray-600 text-sm font-semibold ps-2">
                   Email:
@@ -140,7 +140,7 @@ function JobDetails() {
               <div className="flex items-center mt-3">
                 <img
                   className="w-5"
-                  src="/src/assets/assets/Icons/Frame-4.png"
+                  src="/assets/Icons/Frame-4.png"
                 />
                 <span className="text-gray-600 text-sm font-semibold ps-2">
                   Address:
@@ -158,7 +158,6 @@ function JobDetails() {
                 className={disable ? "disabled-apply-btn" : "apply-btn"}
                 title={disable ? "Already applied" : ""}
                 onClick={() => handleAddToAppliedJobs(selectedJob.id)}
-                // className="block bg-indigo-600 py-3 mt-8 px-4 text-white font-semibold rounded w-80"
               >
                 Apply Now
               </button>

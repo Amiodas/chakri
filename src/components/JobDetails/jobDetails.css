@@ -9,6 +9,10 @@
   width: 100%;
 }
 
+.apply-btn:hover {
+  background-color: #303F9F;
+}
+
 .disabled-apply-btn {
   background-color: gray;
   font-weight: bold;

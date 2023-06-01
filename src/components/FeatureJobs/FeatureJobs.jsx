@@ -43,7 +43,7 @@ function FeatureJobs() {
       <div className="text-center">
         <button
           onClick={handleShowAllData}
-          className="bg-indigo-600 text-white font-semibold px-8 py-3"
+          className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-3"
         >
           {loading ? "Loading..." : "See All Jobs"}
         </button>

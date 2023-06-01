@@ -10,7 +10,7 @@ function Footer() {
           </p>
           <div className="flex gap-3 my-3">
             <button className="p-2 rounded-full">
-              <img className="" src="/src/assets/assets/Icons/Group 9969.png" />
+              <img className="" src="/assets/Icons/Group 9969.png" />
             </button>
           </div>
         </div>

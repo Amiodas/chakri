@@ -13,7 +13,7 @@ function JobCategoryList() {
           <div>
             <img
               className="w-25 h-25 bg-slate-200 p-2 rounded mb-5"
-              src="/src/assets/assets/Icons/accounts 1.png"
+              src="/assets/Icons/accounts 1.png"
             />
           </div>
           <h1 className="text-xl font-bold">Account & Finance</h1>
@@ -23,7 +23,7 @@ function JobCategoryList() {
           <div>
             <img
               className="w-25 h-25 bg-slate-200 p-2 rounded mb-5"
-              src="/src/assets/assets/Icons/business 1.png"
+              src="/assets/Icons/business 1.png"
             />
           </div>
           <h1 className="text-xl font-bold">Creative Design</h1>
@@ -33,7 +33,7 @@ function JobCategoryList() {
           <div>
             <img
               className="w-25 h-25 bg-slate-200 p-2 rounded mb-5"
-              src="/src/assets/assets/Icons/social-media 1.png"
+              src="/assets/Icons/social-media 1.png"
             />
           </div>
           <h1 className="text-xl font-bold">Marketing & Sales</h1>
@@ -43,7 +43,7 @@ function JobCategoryList() {
           <div>
             <img
               className="w-25 h-25 bg-slate-200 p-2 rounded mb-5"
-              src="/src/assets/assets/Icons/chip 1.png"
+              src="/assets/Icons/chip 1.png"
             />
           </div>
           <h1 className="text-xl font-bold">Engineering Job</h1>
