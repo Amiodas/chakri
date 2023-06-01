@@ -24,14 +24,25 @@ function AppliedJobs() {
     setAppliedJobs(filterData);
   };
   return (
-    <div className="container mx-auto px-16 pt-4 pb-10">
-      <div className="bg-slate-100 py-16 rounded-lg">
+    <div className="mx-auto pt-4 md:pb-10">
+      <div className="bg-slate-100 py-16">
+        <img
+          className="absolute top-0 right-0 z-0 w-0 md:w-96"
+          src="/src/assets/assets/All Images/Vector-1.png"
+          alt=""
+        />
         <h1 className="text-2xl font-semibold text-slate-800 text-center py-16">
           Applied jobs
         </h1>
+        <img
+          className="absolute left-0 bottom-72 w-0 md:w-96"
+          src="/src/assets/assets/All Images/Vector.png"
+          alt=""
+        />
       </div>
-
-      {appliedJobs?.length === 0 ? (
+<div className="px-6 md:px-24">
+  
+{loadJobs?.length === 0 ? (
         <p className="my-10 text-center">No Applied jobs yet.</p>
       ) : (
         <div className="my-10">
@@ -49,11 +60,19 @@ function AppliedJobs() {
               Onsite Job
             </button>
           </div>
+          <div>
+            {appliedJobs.length === 0 ? (
+              <p className="text-center mt-10">No Data matched.</p>
+            ) : (
+              ""
+            )}
+          </div>
           {appliedJobs.map((job) => (
             <AppliedJob key={job.id} job={job} />
           ))}
         </div>
       )}
+</div>
     </div>
   );
 }

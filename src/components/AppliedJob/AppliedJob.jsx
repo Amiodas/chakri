@@ -10,9 +10,9 @@ const AppliedJob = ({ job }) => {
   };
   return (
     <div>
-      <div className="flex gap-10 border-2 rounded p-8 mb-6">
+      <div className="md:flex gap-10 border-2 rounded p-8 mb-6">
         <div className="bg-slate-200 p-8 flex items-center">
-          <img src={image} />
+          <img width="120px" src={image} />
         </div>
         <div className="flex-auto">
           <h1 className="text-lg font-semibold text-slate-800 mt-5 mb-1">

@@ -47,17 +47,20 @@ function Statistics() {
   ];
 
   return (
-    <div className="container mx-auto px-16 pt-4 pb-10">
+    <div className="container mx-auto px-6 md:px-16 pt-4 md:pb-10">
       <div className="bg-slate-100 py-16 rounded-lg">
         <h1 className="text-2xl font-semibold text-slate-800 text-center py-16">
           Statistics
         </h1>
       </div>
-      <div className="my-10">
-        <div className="flex items-center justify-center">
+      <div className="md:my-10">
+      <h3 className="text-xl mb-5 mt-6">The graph show the marks of 7 assignments. Highest is 60 in assignment no. 6 and Lowest is 43 in assignment 5.</h3>
+        <div className="md:flex md:items-center md:justify-center">
           <RadialBarChart
-            width={600}
+            md:width={600}
+            width={380}
             height={300}
+            className=""
             innerRadius="20%"
             outerRadius="100%"
             data={data}

@@ -1,6 +1,6 @@
 function Blog() {
   return (
-    <div className="container mx-auto px-16 pt-4 pb-10">
+    <div className="container mx-auto px-6 md:px-16 pt-4 md:pb-10">
       <div className="bg-slate-100 py-16 rounded-lg">
         <h1 className="text-2xl font-semibold text-slate-800 text-center py-16">
           Blog

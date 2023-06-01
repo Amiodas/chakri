@@ -9,8 +9,8 @@ function FeatureJobItems({ job }) {
   };
   return (
     <div>
-      <div className="border-2 rounded p-8 mb-8">
-        <img src={image} />
+      <div style={{height: "100%"}} className="border-2 rounded p-8 mb-8">
+        <img width="120px" height="120px" src={image} />
         <h1 className="text-lg font-semibold mt-5 mb-1">{position}</h1>
         <p className="text-sm text-slate-400">{companyName}</p>
         <div className="mt-4">

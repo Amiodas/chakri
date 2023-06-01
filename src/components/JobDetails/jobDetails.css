@@ -6,7 +6,7 @@
   border-radius: 5px;
   padding-top: 10px;
   padding-bottom: 10px;
-  width: 300px;
+  width: 100%;
 }
 
 .disabled-apply-btn {
@@ -17,6 +17,6 @@
   border-radius: 5px;
   padding-top: 10px;
   padding-bottom: 10px;
-  width: 300px;
+  width: 100%;
   cursor: not-allowed;
 }

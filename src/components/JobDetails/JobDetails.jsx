@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { addToAppliedJobs, getAddedJobsFromDb } from "../../utilities/fakedb";
-import "./jobDetails.css"
+import "./jobDetails.css";
 
 function JobDetails() {
   const [selectedJob, setSelectedJob] = useState([]);
@@ -41,14 +41,25 @@ function JobDetails() {
     addToAppliedJobs(id);
   };
   return (
-    <div className="container mx-auto px-16 pt-4 pb-10">
-      <div className="bg-slate-100 py-16 rounded-lg">
+    <div className="mx-auto pt-4 md:pb-10">
+      <div className="bg-slate-100 py-16">
+        <img
+          className="absolute top-0 right-0 z-0 w-0 md:w-96"
+          src="/src/assets/assets/All Images/Vector-1.png"
+          alt=""
+        />
         <h1 className="text-2xl font-semibold text-center py-16 text-slate-800">
           Job Details
         </h1>
+        <img
+          className="absolute left-0 bottom-72 w-0 md:w-96"
+          src="/src/assets/assets/All Images/Vector.png"
+          alt=""
+        />
       </div>
-      <div className="flex gap-10 mt-10">
-        <div className="flex-6">
+      <div className="px-6 md:px-24">
+      <div className="md:flex gap-10 mt-10">
+        <div className="flex-8">
           <div className="mb-6">
             <span className="font-bold text-slate-800">Job Description:</span>
             <p className="text-sm mt-3">{selectedJob.jobDescription}</p>
@@ -72,7 +83,7 @@ function JobDetails() {
           </div>
           <div className="mb-6">
             <h3 className="font-bold text-slate-800">Experiences:</h3>
-            <p className="text-sm mt-3">{selectedJob.experiences}</p>
+            <p className="text-sm mt-3">{selectedJob.experience}</p>
           </div>
         </div>
         <div className="flex-6">
@@ -140,7 +151,7 @@ function JobDetails() {
               </div>
             </div>
           </div>
-          <div className="flex items-center justify-center">
+          <div className="">
             <Link to="/applied-jobs">
               <button
                 disabled={disable}
@@ -154,6 +165,7 @@ function JobDetails() {
             </Link>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 function Footer() {
   return (
-    <div className=" bg-black px-16 py-16">
-      <div className="container flex px-10 py-16 text-white">
+    <div className=" bg-black px-6 md:px-16 py-6 md:py-16 mt-16">
+      <div className="container md:flex md:px-10 py-6 md:py-16 text-white">
         <div className="flex-auto p-5">
           <h1 className="text-2xl font-semibold mb-5">CareerHub</h1>
           <p className="text-sm font-light">
@@ -9,14 +9,8 @@ function Footer() {
             majority have suffered alteration in some form.
           </p>
           <div className="flex gap-3 my-3">
-            <button className="bg-white p-2 rounded-full">
-              <img className="" src="/src/assets/assets/Icons/Frame-1.png" />
-            </button>
-            <button className="bg-white p-2 rounded-full">
-              <img className="" src="/src/assets/assets/Icons/Frame-1.png" />
-            </button>
-            <button className="bg-white p-2 rounded-full">
-              <img className="" src="/src/assets/assets/Icons/Frame-1.png" />
+            <button className="p-2 rounded-full">
+              <img className="" src="/src/assets/assets/Icons/Group 9969.png" />
             </button>
           </div>
         </div>
@@ -55,8 +49,8 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <hr className="mx-10" />
-      <div className="text-white flex justify-between mx-10 mt-8">
+      <hr className="mx-2 md:mx-10" />
+      <div className="text-white md:flex justify-between mx-6 md:mx-10 mt-8">
         <p className="text-xs">@2023 CareerHub. All Rights Reserved</p>
         <p className="text-xs">Powered by CareerHub</p>
       </div>

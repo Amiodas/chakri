@@ -1,6 +1,5 @@
 import FeatureJobItems from "../FeatureJobItems/FeatureJobItems";
 import { useEffect, useState } from "react";
-import "./FeatureJobs.css";
 
 function FeatureJobs() {
   const [jobs, setJobs] = useState([]);
@@ -24,7 +23,7 @@ function FeatureJobs() {
     setLoading(false);
   };
   return (
-    <div className="container mx-auto px-16 my-16">
+    <div id="featureJobs" className="container mx-auto px-6 md:px-16 my-6 md:my-16">
       <div className="text-center">
         <h1 className="text-5xl mb-5">Featured Jobs</h1>
         <p className="text-slate-600">
@@ -33,8 +32,8 @@ function FeatureJobs() {
         </p>
       </div>
 
-      <div className="flex gap-5 my-16">
-        <div className="feature-item">
+      <div className="md:flex gap-5 my-16">
+        <div className="md:grid md:grid-cols-2 md:grid-flow-row md:gap-10 w-full">
           {displayJobs.map((job) => (
             <FeatureJobItems key={job.id} job={job}></FeatureJobItems>
           ))}

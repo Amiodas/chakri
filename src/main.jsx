@@ -10,11 +10,13 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import JobDetails from "./components/JobDetails/JobDetails.jsx";
 import jobDetailsLoader from "./loaders/jobDetailsLoader.js";
 import appliedJobsLoader from "./loaders/appliedJobsLoader.js";
+import ErrorPage from "./components/ErrorPage/ErrorPage.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
@@ -37,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: "/Statistics",
         element: <Statistics />,
+      },
+      {
+        path: "*",
+        element: <ErrorPage />,
       },
     ],
   },
